@@ -1,3 +1,3 @@
-A puppet module to add a basic last patch date fact to facter. Only supports rpm based distros right now, patches welcome.
+A puppet module to add a basic last patch date fact to facter. Currently supports rpm and debian based distros.
 
 Currently UNTESTED in production.
