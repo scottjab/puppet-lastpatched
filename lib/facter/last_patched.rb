@@ -10,7 +10,7 @@ Facter.add("last_patched") do
             Time.at(Integer(timestamp)).iso8601
         when /Debian/
             #This command shamelessly taken from some example, looking for a better way to do this.
-            command = "ls --time-style='+%s' -l /var/log/apt | awk '{print $6}' | sort -u | tail -1"
+            command = "ls --time-style='+%s' -l /var/log/apt | awk '{print $6}' | sort -n | tail -1"
             timestamp = Facter::Util::Resolution.exec(command).chomp()
             Time.at(Integer(timestamp)).iso8601
         else
